@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Fibonacci.fibonacciDynamic(int n);
+if (n < 0) then (yes)
+     stop
+  else (no)
+   if (n <=1 ) then (yes)
+    : return n;
+    stop
+   else (no)
+    if (memo.containsKey(n)) then (yes)
+     : return memo.get(n);
+     stop
+    else (no)
+     :memo.put(n, fibonacciDynamic(n - 1) + fibonacciDynamic(n - 2));
+     :return fibonacciDynamic(n - 1) + fibonacciDynamic(n - 2);
+  endif
+  stop
+
+@enduml

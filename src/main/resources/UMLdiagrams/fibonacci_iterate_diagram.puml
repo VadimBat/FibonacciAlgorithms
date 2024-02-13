@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Fibonacci.fibonacciIterate(int n);
+if (n < 0) then (yes)
+     stop
+  else (no)
+   if (n <=1 ) then (yes)
+    : return n;
+    stop
+   else (no)
+    :(Iteration loop fori);
+    :return result;
+  endif
+  stop
+
+@enduml

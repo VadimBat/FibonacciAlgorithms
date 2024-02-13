@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+repeat
+:Fibonacci.fibonacciRecurse(int n);
+if (n < 0) then (yes)
+     stop
+  else (no)
+   if (n <=1 ) then (yes)
+    : return n;
+    stop
+   else (no)
+    if (fibonacciRecurse(n - 1) + fibonacciRecurse(n - 2)) then (yes)
+    :return result;
+stop
+
+@enduml
+
